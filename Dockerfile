@@ -1,4 +1,4 @@
-# Start always from Node 6.9 LTS
+_dev# Start always from Node 6.9 LTS
 FROM node:boron
 
 # Create the app user and home directory
@@ -44,4 +44,4 @@ ENTRYPOINT ["/entrypoint.sh"]
 VOLUME [ "$APP_CONTENT", "$DB_CONTENT" ]
 
 EXPOSE 3000
-CMD ["pm2-docker", "process.json"]
+CMD ["pm2-docker", "process_dev.json"]
